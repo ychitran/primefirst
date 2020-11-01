@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPrime(number) {
+            if (number < 2) {
+                return false;
+            }
+
+            if (number == 2) {
+                return true;
+            }
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        let i = 0;
+        let count = 0
+        while (count < 20) {
+            if (isPrime(i) == true) {
+                count++;
+                document.write(i + " la so nguyen to " + "</br>")
+            }
+            i++
+        }
+    </script>
+
+</body>
+
+</html>
